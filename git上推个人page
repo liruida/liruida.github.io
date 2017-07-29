@@ -1,0 +1,17 @@
+
+git clone https://github.com/用户名/用户名.github.io
+
+
+
+cd 用户名.github.io
+
+echo "Hello World" > 网页名.html
+
+git add --all
+
+git commit -m "Initial commit"
+git push -u origin master
+
+
+访问  用户名.github.io/网页名.html 
+
