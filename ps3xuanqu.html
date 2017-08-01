@@ -1,1 +1,186 @@
-Hello World
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>shiyan</title>
+<style>
+*{margin:0;padding:0;}  
+body { padding: 60px }
+#panel {position: relative; width: 100px; height:300px;border: 1px solid #0050D0;background: #96E555; cursor: pointer}
+body { font:12px/19px Arial, Helvetica, sans-serif; color:#666;}
+form div { margin:5px 0;}
+.int label { float:left; width:100px; text-align:right;}
+.int input { padding:1px 1px; border:1px solid #ccc;height:16px;}
+.sub { padding-left:100px;}
+.sub input { margin-right:10px; }
+.formtips{width: 200px;margin:2px;padding:2px;}
+.onError{
+    background:#FFE0E9 ;
+  
+}
+.onSuccess{
+    background:#E9FBEB ;
+  
+}
+.high{
+    color:red;
+}
+ #main{width:1000px;margin:0px auto;}
+  #pic1 img{width:150px;height:100px; float:left;margin:10px;}
+body{
+   background:lightgreen;
+}#nav{
+  width:100%;
+  height:200px;
+}
+.gray{
+   background:lightgray;
+}
+.blue{
+   background:lightblue;
+}
+.violet{
+   background:violet;
+}
+.pink{
+   background:pink;
+}
+.orange{
+   background:orange;
+}
+</style>
+
+<script src="jQuery.js"></script>
+<script>
+$(function(){
+    $("#a").click(function(){
+        $('p').hide(1000);
+      })
+    $("#b").click(function(){
+        $('p').show(1000);
+      })
+  })
+$(function(){
+    $("#panel").click(function(){
+      $(this).css("opacity",0.8)
+       $(this).animate({left: "1000px"}, 10000)
+          .animate({height: "100px"}, 3000);
+  })
+})
+$(function(){
+    $("form :input.required").each(function(){
+      var $required = $("<strong class='high'> *</strong>"); 
+      $(this).parent().append($required); 
+    });
+      $('form :input').blur(function(){  
+       var $parent = $(this).parent();
+       $parent.find(".formtips").remove(); 
+       if( $(this).is('#username') ){
+          if( this.value=="" || this.value.length < 6 ){
+              var errorMsg = '请输入至少6位的用户名.';
+                        $parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+          }else{
+              var okMsg = '输入正确.';
+              $parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+          }
+       }
+/[a-zA-Z0-9]{6,8}/
+       if( $(this).is('#email') ){
+        if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
+                      var errorMsg = '请输入正确的E-Mail地址.';
+            $parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+        }else{
+                      var okMsg = '输入正确.';
+            $parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+        }
+       }
+    })
+})
+//]]>
+window.onload=function(){
+    var div=document.getElementById("main");
+   imgs=div.getElementsByTagName('img');
+   for(var i=0;i<imgs.length;i++){
+    imgs[i].onclick=function(){
+      var bigpic=document.getElementById('bigpic');
+      bigpic.src=this.src;
+      for(var j=0;i<imgs.length;j++){
+        imgs[j].className="";
+      }
+      this.className='choose';
+    }
+   }
+  }
+  
+</script>
+</head>
+<body id="boy">
+<div id="nav">
+  <div id="logo"></div>
+    <div id="menu"> 点击切换：<input type="button" value="灰色" onclick="gray()">
+    <input type="button" value="蓝色" onclick="blue()">
+    <input type="button" value="紫色" onclick="violet()">
+    <input type="button" value="粉色" onclick="pink()">
+    <input type="button" value="橘色" onclick="orange()">
+    </div>
+<p>单击图框，显示主页</p>
+   <button  id="a">隐藏 </button>
+   <button  id="b">显示 </button>
+<div id="panel">点击图框  醉美师大</div> 
+<form method="post" action="">
+  <div class="int">
+    <label for="username">用户名:</label>
+    <input type="text" id="username" class="required" />
+  </div>
+  <div class="int">
+    <label for="email">邮箱:</label>
+    <input type="text" id="email" class="required" />
+  </div>
+  <div class="int">
+    <label for="personinfo">个人资料:</label>
+    <input type="text" id="personinfo" />
+  </div>
+  <div class="sub">
+    <input type="submit" value="提交" id="send"/><input type="reset" id="res"/>
+  </div>
+</form>
+<div id="main">
+        <div id="pic1">
+    <img src="images/s2.jpg" />
+    <img src="images/s3.jpg" />
+    <img src="images/s4.jpg" />
+    <img src="images/s5.jpg" />
+    <img src="images/s6.jpg" />
+
+  </div>
+  <div><img src="images/s1.jpg"  id="bigpic" width="1000px"
+>
+ </div> 
+ 
+</div>
+<script>
+var x = document.getElementById('boy');
+var y = document.getElementById('nav');
+ function gray(){
+   x.className='gray';
+   y.className='orange';
+ }
+ function blue(){
+   x.className='blue';
+   y.className='gray';
+ }
+ function violet(){
+   x.className='violet';
+   y.className='pink';
+ }
+ function pink(){
+   x.className='pink';
+   y.className='violet';
+ }
+ function orange(){
+   x.className='orange';
+   y.className='blue';
+ }
+ </script>
+</body>
+
