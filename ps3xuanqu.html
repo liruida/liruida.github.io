@@ -1,186 +1,88 @@
-<!DOCTYPE>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>shiyan</title>
-<style>
-*{margin:0;padding:0;}  
-body { padding: 60px }
-#panel {position: relative; width: 100px; height:300px;border: 1px solid #0050D0;background: #96E555; cursor: pointer}
-body { font:12px/19px Arial, Helvetica, sans-serif; color:#666;}
-form div { margin:5px 0;}
-.int label { float:left; width:100px; text-align:right;}
-.int input { padding:1px 1px; border:1px solid #ccc;height:16px;}
-.sub { padding-left:100px;}
-.sub input { margin-right:10px; }
-.formtips{width: 200px;margin:2px;padding:2px;}
-.onError{
-    background:#FFE0E9 ;
+  <head>
+    <meta charset="utf-8">
   
-}
-.onSuccess{
-    background:#E9FBEB ;
-  
-}
-.high{
-    color:red;
-}
- #main{width:1000px;margin:0px auto;}
-  #pic1 img{width:150px;height:100px; float:left;margin:10px;}
-body{
-   background:lightgreen;
-}#nav{
-  width:100%;
-  height:200px;
-}
-.gray{
-   background:lightgray;
-}
-.blue{
-   background:lightblue;
-}
-.violet{
-   background:violet;
-}
-.pink{
-   background:pink;
-}
-.orange{
-   background:orange;
-}
-</style>
-
-<script src="jQuery.js"></script>
-<script>
-$(function(){
-    $("#a").click(function(){
-        $('p').hide(1000);
-      })
-    $("#b").click(function(){
-        $('p').show(1000);
-      })
-  })
-$(function(){
-    $("#panel").click(function(){
-      $(this).css("opacity",0.8)
-       $(this).animate({left: "1000px"}, 10000)
-          .animate({height: "100px"}, 3000);
-  })
-})
-$(function(){
-    $("form :input.required").each(function(){
-      var $required = $("<strong class='high'> *</strong>"); 
-      $(this).parent().append($required); 
-    });
-      $('form :input').blur(function(){  
-       var $parent = $(this).parent();
-       $parent.find(".formtips").remove(); 
-       if( $(this).is('#username') ){
-          if( this.value=="" || this.value.length < 6 ){
-              var errorMsg = '请输入至少6位的用户名.';
-                        $parent.append('<span class="formtips onError">'+errorMsg+'</span>');
-          }else{
-              var okMsg = '输入正确.';
-              $parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
-          }
-       }
-/[a-zA-Z0-9]{6,8}/
-       if( $(this).is('#email') ){
-        if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
-                      var errorMsg = '请输入正确的E-Mail地址.';
-            $parent.append('<span class="formtips onError">'+errorMsg+'</span>');
-        }else{
-                      var okMsg = '输入正确.';
-            $parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
-        }
-       }
-    })
-})
-//]]>
-window.onload=function(){
-    var div=document.getElementById("main");
-   imgs=div.getElementsByTagName('img');
-   for(var i=0;i<imgs.length;i++){
-    imgs[i].onclick=function(){
-      var bigpic=document.getElementById('bigpic');
-      bigpic.src=this.src;
-      for(var j=0;i<imgs.length;j++){
-        imgs[j].className="";
-      }
-      this.className='choose';
-    }
-   }
-  }
-  
-</script>
 </head>
-<body id="boy">
-<div id="nav">
-  <div id="logo"></div>
-    <div id="menu"> 点击切换：<input type="button" value="灰色" onclick="gray()">
-    <input type="button" value="蓝色" onclick="blue()">
-    <input type="button" value="紫色" onclick="violet()">
-    <input type="button" value="粉色" onclick="pink()">
-    <input type="button" value="橘色" onclick="orange()">
-    </div>
-<p>单击图框，显示主页</p>
-   <button  id="a">隐藏 </button>
-   <button  id="b">显示 </button>
-<div id="panel">点击图框  醉美师大</div> 
-<form method="post" action="">
-  <div class="int">
-    <label for="username">用户名:</label>
-    <input type="text" id="username" class="required" />
-  </div>
-  <div class="int">
-    <label for="email">邮箱:</label>
-    <input type="text" id="email" class="required" />
-  </div>
-  <div class="int">
-    <label for="personinfo">个人资料:</label>
-    <input type="text" id="personinfo" />
-  </div>
-  <div class="sub">
-    <input type="submit" value="提交" id="send"/><input type="reset" id="res"/>
-  </div>
-</form>
-<div id="main">
-        <div id="pic1">
-    <img src="images/s2.jpg" />
-    <img src="images/s3.jpg" />
-    <img src="images/s4.jpg" />
-    <img src="images/s5.jpg" />
-    <img src="images/s6.jpg" />
+<body bgcolor="cccccc">
 
-  </div>
-  <div><img src="images/s1.jpg"  id="bigpic" width="1000px"
->
- </div> 
+   <p>本博客包含以下内容</p>
+
+<ol>
+
+</ol>
+
+
+
+<h2 id="1基本定义">1.选区
+<ol>
+<li>选区的概念</li>
+<li> 建立矩形选区的基本方式</li>
+<li> 选区保存和载入</li>
+<li> 选区的基本调整方式</li></ol> </h2>
+
+
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;对图像编辑时，要对图层中某部分的像素进行处理，要把这部分单独选择出来，这个部分叫选区，选区内像素可被编辑可被移动，矩形选框工具，快捷键为m，光标显示方式为十字，创建选区的方式，自由方式，正方形选区，从中心点建立选区，建立正方形选区，选区的作用，矩形选区包含了所有类型选区的属性，鼠标进入选区变成白剪头可以移动选区，ctrl加d取消选区,ctrl加shift加d重新选择，ctrl加h可以隐藏选区边框蚂蚁线，选区仍然存在，历史工具也可以找回选区，"重新选择"记录上一步选区，选区只是暂时性的，只有保存选区后才能被保存到psd文件 </p>
+
+
+
+<h2 id="2初始化和类的加载">2、选框工具的选框栏和堆叠工具 </h2>
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;本节主要讲述选框工具的选框栏和堆叠工具，每个工具都有预设工具面板，选区有四种组合方式第一种新选区，第二种添加到选区，在新选区模式下按shift键切换到添加到选区，第三种从选区减去，在新选区模式下按alt键切换到从选区减去，第四种与选区交叉，在新选区模式下按shift加alt键切换到选区交叉。</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;羽化使选区边缘柔和过渡，羽化值的大小决定虚化程度，也可以先做普通选区，然后在进行羽化，矩形选区不存在锯齿，在正常模式下可以自由的画立选区，固定比例，锁定宽好比，固定大小，锁定大小，上下方向键可以对数值进行微量调节，调整边缘，必须要有选区，可以尝试一下不同的选框工具，选中椭圆选框工具，消除锯齿被激活，不选择消除锯齿图像边缘会有锯齿，选择则回变得柔和，椭圆选区和矩形的用法是一样的，单行和竖行选区工具属于特殊的矩形选框，单行和竖行选区是可以羽化的，此情况下，选区不可见，仍然存在。
+ </p>
+
+<p> </p>
+
+
+
+<h2 id="3final关键字">3、套索工具和魔棒工具 </h2>
+<ol>
+<li>套索工具</li>
+<li> 多边形套索工具
+</li>
+<li>磁性套索工具</li>
+<li> 魔棒工具</li><li>快速选择工具
+</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 此讲介绍套索工具组和魔法工具组，套索工具的用法，点击鼠标左键拖动鼠标建立选区。套索工具灵活快速但不够准确，套索工具的选项栏是选区类工具通用的参数，掌握工具使用的共性，学习新工具的特征，按shift加l键或者按着alt键来切换，多边形套索的用法，点击画面的关键的点，来直线连接，在选区未闭合情况下，鼠标不能点选其他命令，可以通过backspace键或delete，来删除刚才的点，esc取消选择，首位接近时光标出现小圆圈，可以点击闭合。交接快捷方式双击，按住ctrl左击或者回车，多边形套索工具可以画到文档的外面，而自由套索则不行，套索工具和多边形套索工具可以按着alt键互相切换。多边形套索适合于选取直线边缘，可以结合放大，缩小，平移，来进行多边形选区制作。
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 复杂的选区要靠另外的工具完成，磁性套索工具，磁性套索工具的控点可以智能识别像素边缘，磁性套索可以通过alt键，与多边形套索快速切换，演示磁性套索的用法可以精确的锁定选区。演示宽度大小的区别，高对比度适合清晰边缘，低对比度适合模糊边缘，频率是来调节磁性控点的多少。
+</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;魔棒工具可以快速的将颜色相近的区域变成选区，取样点以单像素色彩信息取样，多样取样取平均值，容差越大识别范围就越大，反之就越小，演示容差的计算方法。勾选连续只能选取互为相邻的相似像素，勾选对所有图层取样，可以选择没有选中图层的颜色。
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;用魔棒工具演示快速抠图，色彩范围的用法和魔棒工具相似，魔棒工具也有局限性，快速选择工具是非常重要的抠图工具，三种模式是做选区类通用的模式，但是它没有交叉模式，画笔拾取器包含大小，硬度，间距，画笔的大小代表识别的范围，间距是识别的连贯程度，勾选自动增强，识别边缘的能力就更强，演示如何用快速选择工具抠图，调整边缘命令可以优化选区，利用蒙版可以继续细化选区。完美的选区需要多项功能组合，ps的前期工作是搞选区，中期工作是搞创建，后期工作就是调色
+ </p>
+
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+<p> </p>
+ <h5 id="继承"> </h5>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+<p> </p>
+<h4>其它文章：</h4> 
+  <li><a href="https://liruida.github.io/webCSS.html
  
-</div>
-<script>
-var x = document.getElementById('boy');
-var y = document.getElementById('nav');
- function gray(){
-   x.className='gray';
-   y.className='orange';
- }
- function blue(){
-   x.className='blue';
-   y.className='gray';
- }
- function violet(){
-   x.className='violet';
-   y.className='pink';
- }
- function pink(){
-   x.className='pink';
-   y.className='violet';
- }
- function orange(){
-   x.className='orange';
-   y.className='blue';
- }
- </script>
-</body>
-
+">web开发CSS要点总结</a></li>
+  <li><a href="https://liruida.github.io/ps2tuoceng.html 
+">PS层次2~~图层操作</a></li>
+  
+  <li><a href="http://www.w3school.com.cn/ 
+">w3c官网发布标签</a></li>
+  <p>&nbsp;&nbsp;&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;日积月累&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;挟山超海&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;弗能撼也&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </body>
+</html>
