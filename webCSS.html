@@ -19,7 +19,7 @@
 <h2 id="1基本定义">1、 浮动</h2>
 <p> CSS布局需要借助div双标签块级标签进行布局，区分不同div则需要借助3种选择器实现</p>
 
-  <p>首先在布局时将一个大页面分为上中下三个部分，代码见框内（点击代码区域可变为蓝色）
+  <p>1.首先在布局时将一个大页面分为上中下三个部分，代码见框内（点击代码区域可变为蓝色）
 </p>
 <TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
   <html>
@@ -43,7 +43,7 @@
           #content{
              width:1005px;
              height:600px;
-             border:1px solid #eee;
+             border:1px solid #0f0;
          }
           #footer{
              width:100%;
@@ -84,7 +84,7 @@
           #content{
              width:1005px;
              height:600px;
-             border:1px solid #eee;
+             border:1px solid #0f0;
          }
           #footer{
              width:100%;
@@ -105,9 +105,82 @@
   
 <p>代码解释:border：边框像素1像素，实线，颜色；margin：0，表示上下边框为0，auto表示左右自动设置，因为浏览器是默认左对齐的，如此设置后保证整体div居中</p>
 <p> 底部div铺满了整个浏览器，所以它在整体div的外面</p>
+ <p>2.细化，使中间分为左右两部分，且出现在同一行中，用到浮动，代码增加部分见框内（点击代码区域可变为蓝色）
+</p>
+<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
+#content #left{
+             width:680px;
+             heigth:600px;
+             border:1px solid #ff0;
+             float;left;
+         }
+          #content #right{
+             width:260px;
+             heigth:600px;
+             border:1px solid #00f;
+             float;left;
+         }
+        <div id="content">
+         <div id="left"></div>
+         <div id="right"></div>
+</div>
+  </TEXTAREA>
+  代码效果图：<html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+         #warp{
+             width:1005px;
+             heigth:800px;
+             border:1px solid #ccc;
+             margin:0 auto;
+         }
+  
+         #top{
+             width:1005px;
+             heigth:200px;
+             border:solid #f00;
 
+         }
+          #content{
+             width:1005px;
+             heigth:600px;
+             border:1px solid #0f0;
+         }
+          #content #left{
+             width:680px;
+             heigth:600px;
+             border:1px solid #ff0;
+             float;left;
+         }
+          #content #right{
+             width:260px;
+             heigth:600px;
+             border:1px solid #00f;
+             float;left;
+         }
+          #footer{
+             width:100%;
+             heigth:68px;
+             border:1px solid #00f;
+         }
 
-<h3 id="继承"> </h3>
+</style>
+</head>
+<body>
+        <div id="warp">
+           <div id="top"></div>
+           <div id="content">
+         <div id="left"></div>
+         <div id="right"></div>
+</div>
+        </div>
+       <div id="footer"></div>
+</body>
+</html>
+  
+<h3 id="继承">当使用了float后此元素不再属于其父元素，如背景颜色没有显示。将其父元素设置overflow，令其溢出显示。overflow可以使大量内容在小区域里显示，会自动带有滚动条 </h3>
 
 <p> </p>
 
