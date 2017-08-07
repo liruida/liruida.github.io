@@ -79,11 +79,68 @@
 <p> </p>
 
 
-<h2 id="3final关键字">3、 </h2>
+<h2 id="3final关键字">3、对文件内容操作命令  </h2>
+
+<p> cat file1.txt  显示出文件内容操作系统</p>
+ <p> cat file1.txt |  more  全屏方式分页显示文件内容，交互操作方法：按enter键向下逐行滚动，按空格键向下翻一屏，按B键向上翻一屏，按Q键退出。</p>
+<p> cat file1.txt |  less 与more相同</p>
+<p> head -3 file1.txt 查看文件开头的一部分内容，-n控制行数，默认为10行</p>
+<p> tail -3 file1.txt 查看文件末尾的一部分内容，-n控制行数，默认为10行</p>
+<p>wc -l file1.txt 统计行数 </p>
+<p>wc -w file1.txt 统计单词个数 </p>
+
+<p>wc -c file1.txt 统字字节数 </p>
+<p>grep:在文件中查找并显示包含指定字符串的行 </p><p> </p>
+ <p>文档中带#开头的是注释 </p>
+<p>grep -v "^#" file1.txt "^"表示以...开头 -v表示输出不含有所查找的内容，此条命令的含义就是输出去掉文档里的所有注释的内容。
+ </p>
+<p> grep -v "^$" file1.txt  "^$"表示空行 此条命令的含义就是输出去掉文档里的所有含有空行的内容。
+</p>
+<p> grep -v "^$" file1.txt  |  grep -v "^#" file1.txt  输出不含有空格和# |表示通道命令，是指grep -v "^$" file1.txt的结果输出 作为 grep -v "^#" file1.txt 执行前的输入</p>
+<p> </p>
+<p> </p>
+  
+<p> </p>
+ <h3> 4.压缩命令与vm编辑器</h3>
 
 <p> </p>
- 
-<h4>其它文章：</h4> 
+ <p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+<p> </p>
+<p> </p>
+<p> </p>
+  <h4> 5.组账号管理</h4>
+
+<p> </p>
+ <p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+<p> </p>
+<p> </p>
+<p> </p><h5> 6.文件与目录权限</h5>
+
+<p> </p>
+ <p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+<p> </p>
+<p> </p>
+<p> </p>
+  
+<h6>其它文章：</h6> 
   <li><a href="https://liruida.github.io/webCSS.html
  
 ">web开发CSS要点总结</a></li>
