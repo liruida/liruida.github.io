@@ -6,15 +6,110 @@
 <body bgcolor="cccccc">
 
    <h1>本博客包含主要讲述网页用CSS标签知识点</h1>
-<h2 id="1基本定义">1、 </h2>
+<h2 id="1基本定义">1、 表单</h2>
 
 
   <h2>代码见框内（点击代码区域可变为蓝色）</h2>
 <TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
- 
+ <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      
+</head>
+<body>
+
+<form>
+  <!--0-0在标签表单form中前七个均用input，type值不同-->
+  <!--1-1单行文本框--> 
+  用户名：<input type="text" /><br />
+  <!--1-2密码框-->
+  密码：<input type="password" /><br />
+  <!--1-3单选按钮-->
+  性别：<input type="radio" name="sex" value="m"/>男
+        <input type="radio" name="sex" value="f"/>女<br />
+  <!--1-4复选框  checked="checked"语句是添加的默认选项-->
+
+爱好：<input type="checkbox" name="aihao" value="1" checked="checked">排球
+      <input type="checkbox" name="aihao" value="2">足球
+      <input type="checkbox" name="aihao" value="3">篮球
+      <input type="checkbox" name="aihao" value="4" checked="checked">乒乓球
+      <input type="checkbox" name="aihao" value="5">羽毛球<br />
+  <!--1-5文本域-->
+  上传头像:<input type="file"  /><br />
+  <!--1-6提交按钮-->
+     <input type="submit" /><br />
+   
+  <!--1-7普通按钮--> 
+      <input type="button" value="普通按钮"/><br />
+  <!--2多行文本框 row="10" clos="100"表示10行，每行100个字符-->
+   <textarea row="10" clos="100">请输入个人简介</textarea><br />
+  <!--3下拉列表--> 
+   出生日期:
+   <select>
+      <option>请选择</option>
+      <option>1996</option>
+      <option>1997</option>
+   </select>年
+       <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+   </select>月
+</form> 
+</body>
+</html>
 
            </TEXTAREA>
-  代码效果图：
+  <p>代码效果图：</p>
+  <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      
+</head>
+<body>
+
+<form>
+  <!--0-0在标签表单form中前七个均用input，type值不同-->
+  <!--1-1单行文本框--> 
+  用户名：<input type="text" /><br />
+  <!--1-2密码框-->
+  密码：<input type="password" /><br />
+  <!--1-3单选按钮-->
+  性别：<input type="radio" name="sex" value="m"/>男
+        <input type="radio" name="sex" value="f"/>女<br />
+  <!--1-4复选框  checked="checked"语句是添加的默认选项-->
+
+爱好：<input type="checkbox" name="aihao" value="1" checked="checked">排球
+      <input type="checkbox" name="aihao" value="2">足球
+      <input type="checkbox" name="aihao" value="3">篮球
+      <input type="checkbox" name="aihao" value="4" checked="checked">乒乓球
+      <input type="checkbox" name="aihao" value="5">羽毛球<br />
+  <!--1-5文本域-->
+  上传头像:<input type="file"  /><br />
+  <!--1-6提交按钮-->
+     <input type="submit" /><br />
+   
+  <!--1-7普通按钮--> 
+      <input type="button" value="普通按钮"/><br />
+  <!--2多行文本框 row="10" clos="100"表示10行，每行100个字符-->
+   <textarea row="10" clos="100">请输入个人简介</textarea><br />
+  <!--3下拉列表--> 
+   出生日期:
+   <select>
+      <option>请选择</option>
+      <option>1996</option>
+      <option>1997</option>
+   </select>年
+       <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+   </select>月
+</form> 
+</body>
+</html>
   <h2 id="1基本定义">2、 </h2>
 
 
