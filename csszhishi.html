@@ -6,7 +6,222 @@
 <body bgcolor="cccccc">
 
    <h1>本博客包含主要讲述网页用CSS标签知识点</h1>
-<h2 id="1基本定义">1、 </h2>
+<h2 id="1基本定义">1、字体常用样式 </h2>
+
+
+  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
+<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
+ <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+        <!--选中段落，标签为P-->
+         p{
+           <!--设置字体类型-->
+            font-family:"楷体";
+             <!--设置大小-->
+            font-size:20px;
+             <!--设置风格,例如倾斜-->
+            font-style:italic;
+             <!--设置加粗-->
+            font-weight:blod;
+             <!--字体综合设置顺序-->
+            font:italic,bold,36px,"楷体";
+          }
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+           </TEXTAREA>
+ 
+  <h2 id="1基本定义">2、文本常用样式</h2>
+
+
+  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
+<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
+ <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+        <!--选中段落，标签为h1-->
+         h1{
+           <!--设置段落文本对齐-->
+            text-align:center;
+             <!--设置文本缩进-->
+            text-indent:2em;
+             <!--文本修饰，例如有下划线-->
+            text-decoration:underline;
+             <!--设置行高-->
+            line-height:100px;
+             <!--字体颜色-->
+            color:#cccccc;
+          }
+</style>
+</head>
+<body>
+</body>
+</html>
+
+           </TEXTAREA>
+  
+  <h2 id="1基本定义">3、超链接四部曲 </h2>
+
+
+  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
+<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
+ <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+        <!--未被访问的超链接-->
+         a:link{
+            color:#cccccc;
+            text-decoration:underline;
+          }
+         <!--鼠标经过超链接-->
+         a:link{
+            color:#cccfff;
+            
+          }
+         <!--链接被点击的那一刻-->
+         a:link{
+            color:#fffccc;
+            
+          }
+         <!--访问过的超链接-->
+         a:link{
+           color:#ffffff;
+            
+          }
+</style>
+</head>
+<body>
+</body>
+</html>
+
+           </TEXTAREA>
+   <h2 id="1基本定义">4.背景设置 </h2>
+
+
+  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
+<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
+ <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+        <!--背景颜色-->
+         h1{
+            background-color:#cccccc;
+            
+          }
+         <!--背景图片-->
+         body{
+            background-image:url(images/1.jpg)
+              <!--背景图片不平铺，只显示一次-->
+            background-repeat:no-repeat;
+          }
+         <!--背景图片定位，top表示显示在顶部，center表示显示在中间，也可以用数字表示background-position:100px 300px;-->
+         background-position:top center;
+         
+         <!--背景综合设置顺序-->
+          background:#cccccc  url(images/1.jpg)  no-repeat;
+          }
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+           </TEXTAREA>
+  <h2 id="1基本定义">5.列表样式 </h2>
+
+
+  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
+<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
+ <html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+         <!--实战技巧，先将浏览器默认格式取消，均设置为none-->
+         li{
+            list-style-type:none;
+           }
+
+
+        <!--选中列表-->
+         ul li{
+           <!--设置列表项符合-->
+            list-style-type:circle;
+             <!--设置列表项图像-->
+            list-style-image:url(images/1.jpg);
+             <!--设置列表标志位置,可选inside outside-->
+            list-style-position:inside;
+             <!--综合设置-->
+            list-style:;
+          }
+         
+          ul.two li{
+          
+             <!--综合设置-->
+            list-style:url(images/1.jpg) outside;
+          }
+
+         div#left  div#leftmenu  ul li{
+          <!--综合设置-->
+            list-style:url(images/1.jpg) outside;
+         } 
+         
+          div.menu  ul li{
+            list-style:url(images/1.jpg) outside;
+         }
+  
+          
+</style>
+</head>
+<body>
+         <ul>
+            <li>网站首页</li>
+            <li><a href="list.html">学校概况</a></li>
+            <li><a href="#">规章制度</a></li>
+              </ul>
+
+         <ul class="two">
+            <li>网站首页</li>
+            <li><a href="list.html">学校概况</a></li>
+            <li><a href="#">规章制度</a></li>
+              </ul>
+
+         <div id="left">
+         <div id="leftmenu">
+         <ul>
+            <li>网站首页</li>
+            <li><a href="list.html">学校概况</a></li>
+            <li><a href="#">规章制度</a></li>
+              </ul>
+            
+          
+         <div class="menu">
+         <ul>
+            <li>网站首页</li>
+            <li><a href="list.html">学校概况</a></li>
+            <li><a href="#">规章制度</a></li>
+              </ul>
+           
+</body>
+</html>
+
+
+           </TEXTAREA>
+   <h2 id="1基本定义">6.盒子模型 </h2>
 
 
   <h2>代码见框内（点击代码区域可变为蓝色）</h2>
@@ -14,25 +229,6 @@
  
 
            </TEXTAREA>
-  代码效果图：
-  <h2 id="1基本定义">2、 </h2>
-
-
-  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
-<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
- 
-
-           </TEXTAREA>
-  代码效果图：
-  <h2 id="1基本定义">3、 </h2>
-
-
-  <h2>代码见框内（点击代码区域可变为蓝色）</h2>
-<TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
- 
-
-           </TEXTAREA>
-  代码效果图：
 <h2>其它文章：</h2> 
   <li><a href="https://liruida.github.io/webCSS.html
  
