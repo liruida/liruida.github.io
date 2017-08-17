@@ -106,12 +106,12 @@
 <p> </p>
  <h2> 4.压缩命令与vm编辑器</h2>
 
-<p> </p>
- <p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
+<p> tar  cjvf /home/3/2.tar.bz2  /home/2  将目录2压缩为2.tar.bz2  注意路径英文区分大小写</p>
+ <p>tar  xjvf 2.tar.bz2  2  将文件2.tar.bz2解压为2 </p>
+<p> vim file2.txt </p>
+<p> 再按i键，进入insert输入状态，按ESC，如果输入:wq,为保存退去，如果此时输入:q!为不保存退出</p>
+<p> is</p>
+<p> cat file2.txt 查看内容</p>
 <p> </p>
 
 <p> </p>
@@ -119,10 +119,10 @@
 <p> </p>
   <h2> 5.组账号管理</h2>
 
-<p> </p>
- <p> </p>
-<p> </p>
-<p> </p>
+<p> groupadd market 建立新组market</p>
+ <p> tail -5 /ect/group 查看group文件下的所有用户和组，输出market:x:505,组名或用户名，密码占位符，组名或用户名ID。</p>
+<p> groupadd -g 1000 office 建立新组office ,指定ID为1000. 500以上是系统留给用户使用的</p>
+<p> tail -5 /ect/passwd   查看密码组信息，一般不对此文件进行设置，此处ID与group文件下对应用户ID相同。</p>
 <p> </p>
 <p> </p>
 <p> </p>
@@ -149,7 +149,8 @@
 ">web开发CSS要点总结</a></li>
   <li><a href="https://liruida.github.io/ps2tuoceng.html 
 ">PS层次2~~图层操作</a></li>
-  
+  <li><a href="https://liruida.github.io/linuxlilun.html
+">linux运行级别与管理进程和服务</a></li>
   <li><a href="http://www.w3school.com.cn/ 
 ">w3c官网发布标签</a></li>
   <p>&nbsp;&nbsp;&nbsp;</p>
