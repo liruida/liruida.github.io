@@ -6,6 +6,8 @@
 <body bgcolor="cccccc">
 
    <h1>本博客包含主要讲述网页用CSS标签知识点</h1>
+  <a href="#c">点击回到底部</a>
+<a name="b"></a>
 <h2 id="1基本定义">1、字体常用样式 </h2>
 
 
@@ -226,9 +228,100 @@
 
   <h2>代码见框内（点击代码区域可变为蓝色）</h2>
 <TEXTAREA name="example2" cols="200" rows="35" color="cccccc" readonly >
- 
+ 内边距：设置元素与元素边框之间的距离
+padding padding-top padding-right padding-bottom padding-left 
+外边距：元素与元素之间的距离
+margin margin-top  margin-right  margin-bottom margin-left
 
+块级元素具有宽高内外边距的特征，在显示时单独占据一行 如：p h1 ul li form
+
+行内元素不具有宽高内外边距的特征，在显示时不单独占据一行，到最右端自动折行 如：a img input 
+
+select option
+
+转换元素为块级元素
+display:block;
+转换元素为行内元素
+display:line;
+隐藏元素
+display:none;
+
+不同元素内外边距不一致，可用如下方法解决：
+     *{
+       margin:0;
+       padding:0;
+      }
+重点知识点：CSS中的三种选择器
+标签名选择器
+例：<html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+           div{
+                background-color:#00ff00;
+              }
+            ul li{
+          float:left;
+         }
+         </style>
+    </head>
+<body>
+        <div>标签名选择器</div>
+        <ul>
+                  <li>网站首页</li>
+                     <li><a href="list.html">学校概况</a></li>
+                    <li><a href="#">   规章制度</a></li>
+                    <li><a href="#">   德育网</a></li>
+
+</body>
+</html>
+
+类名选择器
+例：<html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+      .one{
+           font-size: 30px;
+          }
+           </style>
+    </head>
+<body>          
+  <div class="one">类名选择器</div>
+</body>
+</html>
+
+id选择器
+<html>
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+      <style type="text/css">
+ #div03{
+        background-color:#00ff00;
+         font-size:20px;
+                }
+  </style>
+    </head>
+<body>     
+       <div id="div03">id选择器</div >
+</body>
+</html>
+
+标示：一个好的CSS需要合理的混合使用这三种选择器
+          div span : 表示设定div标签中的span标签 的样式（补充：<span> 标签被用来组合文档中的行内元素。例子
+          <p><span>some text.</span>some other text.</p>）
+         
+          span .our:  表示设定span标签中 class名称为 our的标签的样式
+    
            </TEXTAREA>
+  未加<span> 标签时的效果：<p>some text.some other text.</p>
+  加了<span> 标签时的效果：<p><span>some text.</span>some other text.</p>
+  <li><a href="http://www.cnblogs.com/gangqing/p/4145258.html
+">图示可参考博客园：盒子模型</a></li>
+  
 <h2>其它文章：</h2> 
   <li><a href="https://liruida.github.io/webCSS.html
  
@@ -238,6 +331,8 @@
   
   <li><a href="http://www.w3school.com.cn/ 
 ">w3c官网发布标签</a></li>
+  <a href="#b">点击回到顶部</a>
+ <a name="c"></a>
   <p>&nbsp;&nbsp;&nbsp;</p>
   <p>&nbsp;&nbsp;&nbsp;</p>
   <p>&nbsp;&nbsp;&nbsp;</p>
