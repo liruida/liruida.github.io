@@ -50,18 +50,37 @@
 <h2 id="3final关键字">3、shell操作 </h2>
 <p> <img src="https://github.com/liruida/cangku1/blob/master/48.jpg?raw=true" width="500" height="550" /></p>
 
-<p> </p>
+<p> <img src="https://github.com/liruida/cangku1/blob/master/49.jpg?raw=true" width="500" height="550" /></p>
   
-<p> </p>
+<p><img src="https://github.com/liruida/cangku1/blob/master/50.jpg?raw=true" width="500" height="550" /> </p>
  
-<p> </p>
-<p> </p>
-<p> </p>
+<p> <img src="https://github.com/liruida/cangku1/blob/master/51.jpg?raw=true" width="500" height="550" /></p>
+<p> <img src="https://github.com/liruida/cangku1/blob/master/52.jpg?raw=true" width="500" height="550" /></p>
+<p> <img src="https://github.com/liruida/cangku1/blob/master/53.jpg?raw=true" width="500" height="550" /></p>
 
 <p> </p>
 <p> </p>
 <p> </p>
-  
+ <h2 >4、网络原理 </h2>
+ <p> 现要将一C类网段地址192.168.18.0/24分成三个子网（主机数为80,50,24）及10台公用办公设备（第四个子网）。</p>
+<p>若按固定子网掩码的方式来划分该C类IP地址，要将该IP划分成4个子网，需要使用8位主机号的三位（可划分2^3-2=6个子网），剩下的5位主机号最多只能容纳2^5-2=30台主机，不满足要求。需用VLSM解决，具体过程如下：</p>
+
+<p>(1) 对于80台主机的子网，需要2^7-2=126，7位主机位（6位主机位只有62台主机），故将192.168.18.0/24划分成两个一级子网192.168.18.0/25及192.168.18.128/25，并将一个子网192.168.18.0/25划分给80台主机用;</p>
+<p>(2) 对于50台主机的子网，需要6位主机位，将192.168.18.128/25的7位主机位拿出一位划分成两个二级子网192.168.18.128/26及192.168.18.192/26，并将一个二级子网192.168.18.128/26分配给50台主机用；</p>
+<p>(3) 以此类推，划分三级子网192.168.18.192/27及192.168.18.224/27分别分配给24台主机及10台公用设备用</p>
+
+<p>最终结果如下：</p>
+<p>192.168.18.0/24->192.168.18.0/25 （80台主机）</p>
+  <p>->192.168.18.128/25à192.168.18.128/26  (50台主机)</p>
+<p>->192.168.18.192/26à192.168.18.192/27 (24台主机)</p>
+        <p>  ->192.168.18.224/27（10台公用设备）</p>
+
+
+<p>其他方法：采用变长子网掩码工作单来分配。</p>
+<p> <li><a href="http://blog.csdn.net/hzhvv/article/details/51734859
+ 
+">变长子网划分</a></li></p>
+
 <h6>其它文章：</h6> 
   <li><a href="https://liruida.github.io/webCSS.html
  
